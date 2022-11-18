@@ -1,0 +1,172 @@
+@import "./base.scss";
+
+// #app {
+//   max-width: min(1280px, 90vw);
+//   margin: 0 auto;
+//   /* padding: 2rem; */
+
+//   font-weight: normal;
+// }
+
+// a,
+// .green {
+//   text-decoration: none;
+//   color: hsla(160, 100%, 37%, 1);
+//   transition: 0.4s;
+// }
+
+// @media (hover: hover) {
+//   a:hover {
+//     background-color: hsla(160, 100%, 37%, 0.2);
+//   }
+// }
+
+// @media (min-width: 1024px) {
+//   /* body {
+//     display: flex;
+//     place-items: center;
+//   } */
+
+//   /* #app {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     padding: 0 2rem;
+//   } */
+// }
+
+.blog {
+  display: grid;
+  gap: 1rem;
+  background-color: hsl(219, 79%, 96%); // cornflowerblue 30% lighter
+
+  padding: 2rem;
+}
+
+.blog_header {
+  padding-inline: 1rem;
+  padding-block: 0.7rem;
+  background-color: cornflowerblue;
+  text-align: center;
+  font-size: 1.3rem;
+  color: hsl(219, 79%, 96%); // cornflowerblue 30% lighter
+}
+
+.blog_post {
+  padding-inline: 1rem;
+  padding-block: 0.7rem;
+  border-color: cornflowerblue;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+
+  &[data-type="title"] {
+    background-color: cornflowerblue;
+    text-align: center;
+    font-size: 1.2rem;
+    color: hsl(219, 79%, 96%); // cornflowerblue 30% lighter
+  }
+}
+
+.post_text {
+  padding-block: 1rem;
+  color: hsl(219, 79%, 26%); // cornflowerblue 40% darker
+}
+.post_author {
+  color: hsl(219, 79%, 76%); // cornflowerblue 10% lighter
+  &::before {
+    content: "by ";
+  }
+}
+.post_ts {
+  text-align: right;
+  font-size: 0.8rem;
+  color: hsl(219, 79%, 76%); // cornflowerblue 10% lighter
+  &::before {
+    content: "at ";
+  }
+}
+
+//
+// Messages
+//
+
+.message {
+  padding-inline: 1rem;
+  padding-block: 0.7rem;
+  border-color: cornflowerblue;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+
+  .message_text {
+    color: hsl(219, 79%, 26%); // cornflowerblue 40% darker
+  }
+
+  .message_ts {
+    text-align: right;
+    font-size: 0.8rem;
+    color: hsl(219, 79%, 76%); // cornflowerblue 10% lighter
+    &::before {
+      content: "at ";
+    }
+  }
+
+  &[data-type="mine"] {
+    background-color: hsl(34, 57%, 90%); // burlywood but 20% lighter
+    border-color: burlywood;
+
+    .message_text {
+      text-align: right;
+      color: hsl(34, 57%, 20%); // burlywood but 50% darker;
+    }
+
+    .message_ts {
+      text-align: right;
+      font-size: 0.8rem;
+      color: burlywood;
+      &::before {
+        content: "at ";
+      }
+    }
+  }
+}
+
+//
+// Buttons
+//
+.button {
+  padding-inline: 0.7rem;
+  padding-block: 0.5rem;
+  border-color: burlywood;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  color: hsl(34, 57%, 20%); // burlywood but 50% darker;
+  text-decoration: none;
+  background-color: white;
+
+  &:hover {
+    background-color: hsl(34, 57%, 90%); // burlywood but 20% lighter
+  }
+
+  &[data-size="small"] {
+    padding-inline: 0.4rem;
+    padding-block: 0.2rem;
+  }
+}
+
+input {
+  padding-inline: 0.4rem;
+  padding-block: 0.2rem;
+
+  border-color: burlywood;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  color: hsl(34, 57%, 20%); // burlywood but 50% darker;
+
+  &:focus-visible {
+    border-color: hsl(34, 57%, 60%); // burlywood but 10% darker;
+    outline-style: none;
+  }
+}
