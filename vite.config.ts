@@ -10,8 +10,6 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
-      // querystring: "qs",
-      // querystring: "rollup-plugin-node-polyfills/polyfills/qs",
     },
   },
 });
